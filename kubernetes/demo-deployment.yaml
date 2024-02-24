@@ -15,7 +15,7 @@ spec:
         app: demo-deployment
     spec:
       containers:
-      - image: lvhongphuc/demo-image
+      - image: {{ .Values.appimage }}:{{ .Values.apptag }}
         name: demo-image
         resources:
           requests:
