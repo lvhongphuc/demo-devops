@@ -27,7 +27,7 @@ jobs:
            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
            -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
-           -Dsonar.sources=app/
+           -Dsonar.sources=app/src/
           
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
@@ -54,5 +54,5 @@ jobs:
          region: ${{ env.AWS_REGION }}
          tags: latest,$\{\{ github.run_number }}
          daemon_off: false
-         dockerfile: /app/Dockerfile
+         dockerfile: /app/src/Dockerfile
          context: ./
