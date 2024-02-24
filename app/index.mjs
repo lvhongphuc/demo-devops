@@ -1,7 +1,8 @@
 import express from "express"
 import os from "os"
 
-const app = express()
+let app = express()
+app.disable("x-powered-by")
 
 app.get("/", (req, res) => {
     res.send(`<h2>VERSION 2:Hi There from ${os.hostname}</h2>`)
