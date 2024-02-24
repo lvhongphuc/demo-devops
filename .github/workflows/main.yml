@@ -18,7 +18,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
 
-      - name: SonarQube Scan
+      - name: SonarQube Setup
         uses: sonarsource/sonarqube-scan-action@master
         with:
           projectBaseDir: app/src
@@ -32,7 +32,7 @@ jobs:
            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
            -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
-           -Dsonar.sources=src/
+           -Dsonar.sources=app/src/
           
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
