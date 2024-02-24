@@ -4,7 +4,6 @@ env:
   AWS_REGION: us-east-2
   ECR_REPOSITORY: demo-image
   EKS-CLUSTER: demo-cluster
-  SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
 
 jobs:
   Testing:
