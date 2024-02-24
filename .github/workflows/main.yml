@@ -3,7 +3,7 @@ on: workflow_dispatch
 env:
   AWS_REGION: us-east-2
   ECR_REPOSITORY: demo-image
-  EKS-CLUSTER: demo-cluster
+  EKS_CLUSTER: demo-cluster
 
 jobs:
   TESTING:
